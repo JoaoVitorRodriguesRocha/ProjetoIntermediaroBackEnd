@@ -23,28 +23,22 @@ public class Controller {
 
     @GetMapping("/ajuda")
     @ResponseBody
-    public List<Ajuda> ajuda(){
+  //  public List<Ajuda> ajuda(){
         return aluno;
     }
 
     @GetMapping("/ajuda")
-        public ResponseEntity<Object> insert(@RequestBody Ajuda ajuda){
+        public ArrayList<Ajuda> (){
+        AJuda ajuda1 = new Ajuda("João Vitor Rodrigues Rocha","RuneScape MMORPG");
 
-            Ajuda aluno = new Ajuda(
-                    ajuda.getEstudante(),
-                    ajuda.getProjeto()
-            );
+                aluno.add(ajuda1);
 
-            Map<String, Object> respostaAluno = new HashMap<>();
-            respostaAluno.put("estudante", aluno.getEstudante());
-            respostaAluno.put("projeto", aluno.getProjeto());
-
-        return ResponseEntity.status(200).body(respostaAluno);
+        return aluno;
         }
 
         /* professor infelizmente, tentei de tudo mas eu não entendi nada de spring,
         n sei oq eu to fznd, nem pq n ta funcionando nada, mas tentei, vi video aula sobre
-        pra tentar fazer pelomenos o basiquinho mas não deu, desculpa entregar um trabalho
+        pra tentar fazer pelo menos o basiquinho mas não deu, desculpa entregar um trabalho
         nesse nivel aí mas é o que deu, tentar recuperar a nota la na ultima prova. 😓
          */
 

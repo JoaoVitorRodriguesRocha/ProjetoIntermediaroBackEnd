@@ -2,8 +2,8 @@ package com.example.ProjetoIntermediario;
 
 public class Ajuda {
 
-    private String estudante = "João Vitor Rodrigues Rocha";
-    private String projeto = "MMORPG";
+    private String estudante;
+    private String projeto;
 
     public Ajuda(String estudante, String projeto) {
         this.estudante = estudante;
